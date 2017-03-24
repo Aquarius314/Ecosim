@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Launching ECOSIM Project"
+echo
+
+python src/main.py
+
+find . -name "*.pyc" -type f -delete
+
+echo
+echo "Done"
