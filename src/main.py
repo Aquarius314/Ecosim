@@ -24,7 +24,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    if counter > 50:
+    if counter > 100:
         running = False # close window after some ticks
 
     # actions and calculations
