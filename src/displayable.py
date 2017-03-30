@@ -7,4 +7,4 @@ class Displayable:
         pass
 
 
-# functionality: displayable interface. Displaying objects should inherit this class
+# functionality: displayable interface. Displaying physicals should inherit this class

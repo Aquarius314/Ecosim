@@ -8,7 +8,7 @@ class Window(Displayable):
 
     def collect_displayables(self):
         displayables_list = []
-        # all objects on the screen go here
+        # all physicals on the screen go here
         for element in self.world.collect_displayables():
             displayables_list.append(element)
 
@@ -21,4 +21,4 @@ class Window(Displayable):
         return
 
 
-# functionality: stores window objects (game display, user interface canvas etc)
+# functionality: stores window physicals (game display, user interface canvas etc)

@@ -7,13 +7,13 @@ from active import Active
 class Tail(Displayable, Active):
 
     circles = []
-    circles.append(Circle((200,0,0), (200,300), 10))
-    circles.append(Circle((200,0,0), (210,300), 8))
-    circles.append(Circle((200,0,0), (218,300), 6))
-    circles.append(Circle((200,0,0), (224,300), 6))
-    circles.append(Circle((200,0,0), (230,300), 4))
-    circles.append(Circle((200,0,0), (234,300), 4))
     __sin_clock = 0.0
+
+    def __init__(self, fish=None):
+        if fish is not None:
+            self.x = fish.get_x()
+            self.y = fish.get_y()
+        return
 
     def wave(self):
         index = 0.0
@@ -23,7 +23,7 @@ class Tail(Displayable, Active):
             real_y = wave_range*math.sin((index+self.__sin_clock)/3.0)
             circle.move_to(circle.get_x(), self.circles[0].get_y()+int(real_y))
             circle.move(-2, 0)
-
+        return
 
     def activity(self):
         self.__sin_clock += 1
@@ -33,5 +33,8 @@ class Tail(Displayable, Active):
     def display(self, output):
         for circle in self.circles:
             circle.display(output)
+        return
+
+
 
 # functionality: displaying waving tail animation using sine function

@@ -5,7 +5,7 @@ from fish import Fish
 
 class World:
 
-    fish = Fish()
+    fish = Fish(200, 200, 10)
 
     def collect_actives(self):
         actives_list = []
@@ -22,5 +22,5 @@ class World:
             active.activity()
         return
 
-# functionality: space for all the living gameobjects. Stores fish and predators
+# functionality: space for all the living gamephysicals. Stores fish and predators
 # this is the heart of the ecosystem

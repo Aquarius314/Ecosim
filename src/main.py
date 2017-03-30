@@ -31,7 +31,6 @@ while running:
     window.world.calculate()
 
     counter += 1
-    print(counter)
     display_screen()
 
 
