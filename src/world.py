@@ -5,7 +5,7 @@ from fish import Fish
 
 class World:
 
-    fish = Fish(200, 200, 10)
+    fish = Fish(500, 400, 10)
 
     def collect_actives(self):
         actives_list = []

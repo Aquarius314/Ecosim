@@ -1,7 +1,8 @@
 import pygame
 from displayable import Displayable
+from physical import Physical
 
-class Circle(Displayable):
+class Circle(Displayable, Physical):
 
     # Surface - main screen (output)
     color = (200, 0, 0)

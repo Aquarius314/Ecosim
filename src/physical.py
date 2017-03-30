@@ -21,8 +21,7 @@ class Physical(object):
         return self.__r
 
     def move(self, x, y):
-        self.__x_position += x
-        self.__y_position += y
+        self.move_to(self.get_x()+x, self.get_y()+y)
         return
 
     def move_to(self, x, y):
