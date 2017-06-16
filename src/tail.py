@@ -13,7 +13,6 @@ class Tail(Displayable, Active, Physical):
     def __init__(self, fish=None):
         if fish is not None:
             self.move_to(fish.get_x(), fish.get_y())
-            print("Po utworzeniu wspolrzedne ogona: x=%d, y=%d" % (self.get_x(), self.get_y()))
 
         cir_x = self.get_x()
         cir_y = self.get_y()
@@ -29,7 +28,6 @@ class Tail(Displayable, Active, Physical):
 
     def wave(self):
         index = 0.0
-        print("Ogonek: x=%d, y=%d" % (self.get_x(), self.get_y()))
         for circle in self.circles:
             index += 2.5
             wave_range = self.circles[0].get_radius()-circle.get_radius()
@@ -46,7 +44,6 @@ class Tail(Displayable, Active, Physical):
         Physical.move(self, x, y)
         for circle in self.circles:
             circle.move(x, y)
-            print("Circle: x=%d, y=%d" % (circle.get_x(), circle.get_y()))
         return
 
     def display(self, output):

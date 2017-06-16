@@ -1,5 +1,6 @@
+from displayable import Displayable
 
-class Physical(object):
+class Physical(Displayable):
 
     __x_position = 0
     __y_position = 0

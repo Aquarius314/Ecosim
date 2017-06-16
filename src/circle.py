@@ -10,9 +10,6 @@ class Circle(Displayable, Physical):
     __radius = 10
     __width = 0
 
-    def __init__(self):
-        return
-
     def __init__(self, color=(200,0,0), pos=(100,100), radius=10, width=0):
         self.color = color
         self.pos = pos
@@ -21,7 +18,10 @@ class Circle(Displayable, Physical):
         return
 
     def display(self, output):
-        pygame.draw.circle(output, self.color, self.pos, self.__radius, self.__width)
+        drawX = int(self.pos[0])
+        drawY = int(self.pos[1])
+        pygame.draw.circle(output, self.color, (drawX, drawY), self.__radius, self.__width)
+        print("dX:%d, dY:%d" % (drawX, drawY))
         return
 
     def move_to(self, x, y):

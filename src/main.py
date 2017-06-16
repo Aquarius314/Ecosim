@@ -1,15 +1,15 @@
 import pygame
 from tail import Tail
-from world import World
-from window import Window
+import world
+import window
 
 pygame.init()
 clock = pygame.time.Clock()
-screen = pygame.display.set_mode((600, 600))
+screen = pygame.display.set_mode((world.screen_width, world.screen_height))
 
 running = True
 counter = 0
-window = Window()
+window = window.Window()
 
 def display_screen():
     pygame.display.update()
@@ -18,14 +18,17 @@ def display_screen():
     window.display(screen)
     return
 
+    ## MAIN LOOP
 
 while running:
+    # event handling
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-    if counter > 100:
-        running = False # close window after some ticks
+    # autoclose
+    #if counter > 300:
+    #    running = False # close window after some ticks
 
     # actions and calculations
     window.world.calculate()

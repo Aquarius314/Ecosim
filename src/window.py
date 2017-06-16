@@ -2,9 +2,14 @@ import pygame
 from world import World
 from displayable import Displayable
 
+
 class Window(Displayable):
 
     world = World()
+
+    def __init__(self):
+        self.world = World()
+        return
 
     def collect_displayables(self):
         displayables_list = []
